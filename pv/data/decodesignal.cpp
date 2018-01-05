@@ -575,7 +575,7 @@ void DecodeSignal::restore_settings(QSettings &settings)
 
 uint32_t DecodeSignal::get_input_segment_count() const
 {
-	int64_t count = std::numeric_limits<int64_t>::max();
+	size_t count = std::numeric_limits<int64_t>::max();
 	bool no_signals_assigned = true;
 
 	for (const data::DecodeChannel &ch : channels_)
