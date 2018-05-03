@@ -984,7 +984,8 @@ void DecodeSignal::decode_proc()
 				segments_.at(current_segment_id_).start_time = input_segment->start_time();
 
 				// Reset decoder state but keep the decoder stack intact
-				terminate_srd_session();
+				stop_srd_session();
+				start_srd_session();
 			} else {
 				// All segments have been processed
 				decode_finished();
